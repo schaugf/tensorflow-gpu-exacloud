@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-print('RUNNING ON DEFAULT HARDWARE')
+print('running on default hardware...')
 
 # creates a graph.
 a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
@@ -11,7 +11,7 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 # Runs the op.
 print(sess.run(c))
 
-print('RUNNING ON REQUESTED GPU')
+print('running on gpu hardware...')
 
 # Creates a graph.
 with tf.device('/gpu:0'):
