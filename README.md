@@ -105,7 +105,7 @@ Take a look at submit-gpu.s.
 This is a sample batch script that will execute the gpu-tutorial.py on a GPU and tell Slurm how to handle your job.
 
 ```
-#!/usr/bin/bash				# tells slurm to start a shell
+#!/usr/bin/bash			# tells slurm to start a shell
 #SBATCH --partition=gpu 	# tells slurm to request access to a gpu-equipped partition
 #SBATCH --gres=gpu:1		# tells slurm to use the first gpu core for computation
 #SBATCH --get-user-env		# tells slurm to use the virtualenv you are currently running
@@ -115,7 +115,7 @@ srun python gpu-tutorial.py	# runs your python script
 Close out and send this to Slurm using the following
 
 ```
-sbatch submit-gpu.s
+$ sbatch submit-gpu.s
 ```
 
 Assuming everything works right, after a few seconds you should see your current directory populated with a new file called slurm-[a bunch of numbers].out.
