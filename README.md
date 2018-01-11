@@ -4,6 +4,7 @@ Training neural networks on GPU architecture will demonstrably decrease required
 This tutorial is meant to illustrate the process of configuring a system to train a simple neural network on a GPU on Exacloud, which is managed by the Slurm job scheduler.
 
 Slurm is designed to process a submit script (suffixed with a .s) to allocate necessary resources for program execution.
+I'll walk through both how to launch an interactive session with a GPU and how to tell Exacloud to use a GPU to run your program.
 
 ##	Get access to GPU partition
 
