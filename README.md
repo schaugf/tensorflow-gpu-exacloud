@@ -6,6 +6,23 @@ This tutorial is meant to illustrate the process of configuring a system to trai
 Exacloud uses the Slurm job scheduler to process computing requests and allocate hardware resources.
 I'll walk through both how to use slurm to launch an interactive session on Exacloud, how to request GPU hardware, and how to tell Exacloud to explicitly use a GPU to run your program or train your neural network.
 
+##	Clone this repo
+
+I have provided a few very simple scripts to launch an interactive GPU-equipped session, request GPU resources for batch processing, and a simple neural network that uses google's TensorFlow library for machine intelligence.
+First, access your home directory on exacloud and clone this repository.
+
+```
+ssh exahead1
+git clone https://github.com/schaugf/tensorflow-gpu-exacloud
+```
+
+Once done, change into that directory and make sure the contents of this repo are present.
+
+```
+cd tensorflow-gpu-exacloud
+ls
+```
+
 ##	Get access to GPU partition
 
 If you're new to this, you will need to request access to a GPU-equipped partition on Exacloud.
