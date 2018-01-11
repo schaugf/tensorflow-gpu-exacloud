@@ -8,7 +8,7 @@ I'll walk through both how to launch an interactive session with a GPU and how t
 
 ##	Get access to GPU partition
 
-If you're new to this, you will need to require access to a GPU-equipped partition on Exacloud.
+If you're new to this, you will need to request access to a GPU-equipped partition on Exacloud.
 If you're unsure whether you have access or not, simply run
 
 ```
