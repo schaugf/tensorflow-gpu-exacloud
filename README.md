@@ -12,7 +12,7 @@ If you're new to this, you will need to request access to a GPU-equipped partiti
 If you're unsure whether you have access or not, simply run
 
 ```
-$ ./interactive-gpu.s
+./interactive-gpu.s
 ```
 
 If an error is returned, then you probably don't have access and need to contact ACC.
@@ -20,7 +20,7 @@ If no error is returned, and instead you see a message saying you're launching a
 You can confirm that you have access to GPU hardware by typing
 
 ```
-$ nvidia-smi
+nvidia-smi
 ```
 
 Depending on which GPU partition you have been allocated to, you should see a list of at least one device that looks like a GPU.
@@ -39,19 +39,19 @@ Note that I am using python3 which seems to work, although I have not tested thi
 If you are usure of which python version you'd like to use, I recommend use python3.
 
 ```
-$ virtualenv -p python3 tensorflow
+virtualenv -p python3 tensorflow
 ```
 
 Once that's finished, begin using your virtual environment by sourcing the activation script.
 
 ```
-$ source tensorflow/bin/activate
+source tensorflow/bin/activate
 ```
 
 We will keep the virtualenv open for now, but you can terminate the environment at any time by simply typing
 
 ```
-$ deactivate
+deactivate
 ```
 
 ##	Installing Tensorflow
@@ -60,7 +60,7 @@ Since virtualenv automatically installs a local version of pip, you can install 
 However, because we will be utilizing GPU architecture, we want to be sure to install the GPU-capable version of tensorflow.
 
 ```
-$ pip install tensorflow-gpu
+pip install tensorflow-gpu
 ```
 
 ## Configure LD_LIBRARY_PATH
@@ -69,7 +69,7 @@ Tensorflow requires access to NVIDIA's CUDA library to communicate with the GPU 
 Edit your .bash_profile to include the following line (after any other modifications to LD_LIBRARY_PATH.
 
 ```
-$ export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/lib64/nvidia
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/lib64/nvidia
 ```
 
 Once done, either log out and back onto Exacloud, or source your .bash_profile.
@@ -79,7 +79,7 @@ Once done, either log out and back onto Exacloud, or source your .bash_profile.
 Assuming you're still in an interactive session with GPU access and you are in your virtual environment, you can test your installation with
 
 ```
-$ python -c "import tensorflow"
+python -c "import tensorflow"
 ```
 
 If you get an error, then you may well be missing a required CUDA dependency.
@@ -90,7 +90,7 @@ Otherwise, if the above command doesn't return an error (nothing happens), then 
 Try running
 
 ```
-$ python gpu-tutorial.py
+python gpu-tutorial.py
 ```
 
 If everything is working, you should see a bunch of stuff spit out into the console.
@@ -115,7 +115,7 @@ srun python gpu-tutorial.py	# runs your python script
 Close out and send this to Slurm using the following
 
 ```
-$ sbatch submit-gpu.s
+sbatch submit-gpu.s
 ```
 
 Assuming everything works right, after a few seconds you should see your current directory populated with a new file called slurm-[a bunch of numbers].out.
