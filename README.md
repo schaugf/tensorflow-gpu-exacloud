@@ -71,7 +71,7 @@ We will keep the virtualenv open for now, but you can terminate the environment 
 deactivate
 ```
 
-##	Installing Tensorflow
+##	Install Tensorflow-GPU
 
 Since virtualenv automatically installs a local version of pip, you can install tensorflow and any other requisite dependencies as you would on a normal system.
 However, because we will be utilizing GPU architecture, we want to be sure to install the GPU-capable version of tensorflow.
